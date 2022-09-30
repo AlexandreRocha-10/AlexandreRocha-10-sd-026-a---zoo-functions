@@ -2,7 +2,6 @@ const { species } = require('../data/zoo_data');
 const data = require('../data/zoo_data');
 
 function countAnimals(animal, sexo) {
-  let counter = 0;
   if (!animal || !sexo) {
     return {
       lions: 4,
@@ -17,7 +16,6 @@ function countAnimals(animal, sexo) {
     };
   }
   species.find((specie) => specie.name === animal);
-  
 }
 
 module.exports = countAnimals;
