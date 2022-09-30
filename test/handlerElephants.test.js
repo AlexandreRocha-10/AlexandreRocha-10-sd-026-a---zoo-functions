@@ -42,4 +42,16 @@ describe('Testes da função HandlerElephants', () => {
     const expected = undefined;
     expect(actual).toEqual(expected);
   });
+
+  it('caso receba um parâmetro diferente de uma string, é necessário retornar parâmetro inválido', () => {
+    const actual = handlerElephants(2);
+    const expected = 'Parâmetro inválido, é necessário uma string';
+    expect(actual).toEqual(expected);
+  });
+
+  it('caso receba uma string vazia de parâmetro, é necessário retornar Parâmetro inválido, é necessário uma string', () => {
+    const actual = handlerElephants('');
+    const expected = [];
+    expect(actual).toEqual(expected);
+  });
 });
