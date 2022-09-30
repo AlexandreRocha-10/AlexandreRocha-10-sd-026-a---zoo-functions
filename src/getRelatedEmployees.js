@@ -1,7 +1,7 @@
 const data = require('../data/zoo_data');
 
 function isManager(id) {
-  if (id ) {
+  if (id) {
     return true;
   } return false;
 }
