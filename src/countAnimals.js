@@ -4,8 +4,8 @@ const data = require('../data/zoo_data');
 function countAnimals(animal) {
   if (!animal) {
     const objAnimais = {};
-    species.forEach((specie) => {
-      objAnimais[specie.name] = objAnimais.residents.length;
+    species.forEach(({ name, residents }) => {
+      objAnimais[name] = residents.length;
     });
     return objAnimais;
   }
