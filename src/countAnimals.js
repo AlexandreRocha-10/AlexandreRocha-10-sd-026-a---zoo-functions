@@ -9,8 +9,12 @@ function countAnimals(animal) {
     });
     return objAnimais;
   }
-
-  // const selectSpecie = species.find((specie) => specie.name === animal);
+  const { specie, sex } = animal;
+  if (sex) {
+    return species.find((element) => element.name === specie).residents
+      .filter((element2) => element2.sex === sex).length;
+  }
+  return species.find(({ name }) => name === specie).residents.length;
 }
 
 module.exports = countAnimals;
