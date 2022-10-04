@@ -10,6 +10,6 @@ function getEmployeeByName(employeeName) {
     || employee.firstName === employeeName);
 }
 
-console.log(getEmployeeByName());
+console.log(getEmployeeByName({ name: 'Spry' }));
 
 module.exports = getEmployeeByName;
